@@ -28,8 +28,8 @@ namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio.Models
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Pratica numero:\t{_id+1}");
             sb.AppendLine($"Pratica tipo:\t{_tipo}");
-            sb.AppendLine($"Nome:\t\t{_nome}");
-            sb.AppendLine($"Cognome:\t{_cognome}");
+            sb.AppendLine($"Nome:\t\t\t{_nome}");
+            sb.AppendLine($"Cognome:\t\t{_cognome}");
             sb.AppendLine($"Descrizione:\t{_descrizione}");
             return sb.ToString();
         }

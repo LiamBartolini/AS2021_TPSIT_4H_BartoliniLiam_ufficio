@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio.Models
 {
@@ -58,7 +59,19 @@ namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio.Models
 
         public bool SalvataggioPratiche()
         {
-            return true;
+            StringBuilder sb = new StringBuilder();
+            foreach(var p in _pratiche)
+                sb.AppendLine(p.ToString() + "\n\t\t============");
+            
+            try
+            {
+                File.AppendAllText("Dati.txt", sb.ToString());
+                return true;
+            }
+            catch
+            {
+                throw new Exception("Salvataggio pratiche non riuscito!");
+            }
         }
     }
 }

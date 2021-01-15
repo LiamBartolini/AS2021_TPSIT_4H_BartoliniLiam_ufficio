@@ -15,7 +15,7 @@ namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio
             {
                 Console.WriteLine(ufficio.RicercaPratica(2));
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Output(e);
             }
@@ -23,6 +23,17 @@ namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio
             try
             {
                 Console.WriteLine(ufficio.RicercaPratica('A'));
+            }
+            catch (Exception e)
+            {
+                Output(e);
+            }
+
+            Console.WriteLine($"Esito eliminazione pratica: {ufficio.EliminazionePratica(2)}");
+
+            try
+            {
+                Console.WriteLine(ufficio.SalvataggioPratiche());
             }
             catch (Exception e)
             {

@@ -1,0 +1,35 @@
+Pratica numero:	1
+Pratica tipo:	A
+Nome:			Liam
+Cognome:		Bartolini
+Descrizione:	Prima pratica
+
+		============
+Pratica numero:	2
+Pratica tipo:	A
+Nome:			Er
+Cognome:		Faina
+Descrizione:	Seconda pratica
+
+		============
+Pratica numero:	3
+Pratica tipo:	B
+Nome:			Potenza
+Cognome:		Surreale
+Descrizione:	Terza pratica
+
+		============
+Pratica numero:	4
+Pratica tipo:	D
+Nome:			Stefano
+Cognome:		Lepri
+Descrizione:	Evasione fiscale
+
+		============
+Pratica numero:	5
+Pratica tipo:	H
+Nome:			Prova
+Cognome:		Immissione
+Descrizione:	Prova immissione
+
+		============
