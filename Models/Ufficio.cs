@@ -7,7 +7,7 @@ namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio.Models
 {
     class Ufficio
     {
-        List<Pratica> _pratiche = new List<Pratica>();
+        static List<Pratica> _pratiche = new List<Pratica>();
 
         public Ufficio()
         {
@@ -60,6 +60,7 @@ namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio.Models
         public bool SalvataggioPratiche()
         {
             StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"\tSalvataggio in data: {DateTime.Today:dd/MM/yyyy} {DateTime.Now:HH:mm}\n");
             foreach(var p in _pratiche)
                 sb.AppendLine(p.ToString() + "\n\t\t============");
             
@@ -71,6 +72,19 @@ namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio.Models
             catch
             {
                 throw new Exception("Salvataggio pratiche non riuscito!");
+            }
+        }
+
+        static public bool RipristinoPratiche()
+        {
+            try
+            {
+                File.WriteAllText("Dati.txt", "");
+                return true;
+            }
+            catch
+            {
+                throw new Exception("Ripristino pratiche non riuscito!");
             }
         }
     }
