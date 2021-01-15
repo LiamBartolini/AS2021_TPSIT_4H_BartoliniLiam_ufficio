@@ -20,8 +20,8 @@ namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio.Models
 
         public Pratica RicercaPratica(int id)
         {
-            foreach(var p in _pratiche)
-                if (p.Id == id)
+            foreach (var p in _pratiche)
+                if (p._id == id)
                     return p;
 
             throw new Exception("Pratica non trovata!");
@@ -47,7 +47,7 @@ namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio.Models
         public bool EliminazionePratica(int id)
         {
             foreach(var p in _pratiche)
-                if (p.Id == id)
+                if (p._id == id)
                 {
                     p._exist = false;
                     return true;
