@@ -22,7 +22,7 @@ namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio.Models
         public Pratica RicercaPratica(int id)
         {
             foreach (var p in _pratiche)
-                if (p._id == id)
+                if (p._id == id && p._exist)
                     return p;
 
             throw new Exception("Pratica non trovata!");
@@ -34,7 +34,7 @@ namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio.Models
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"\tPratiche di tipo: {tipoPratica}\n");
             foreach(var p in _pratiche)
-                if (p.Tipo == tipoPratica)
+                if (p.Tipo == tipoPratica && p._exist)
                 {
                     sb.AppendLine(p.ToString());
                     isFinded = true;
@@ -49,7 +49,7 @@ namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio.Models
         public bool EliminazionePratica(int id)
         {
             foreach(var p in _pratiche)
-                if (p._id == id)
+                if (p._id == id - 1)
                 {
                     p._exist = false;
                     return true;
@@ -61,8 +61,9 @@ namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio.Models
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"\tSalvataggio in data: {DateTime.Today:dd/MM/yyyy} {DateTime.Now:HH:mm}\n");
-            foreach(var p in _pratiche)
-                sb.AppendLine(p.ToString() + "\n\t\t============");
+            foreach (var p in _pratiche)
+                if (p._exist)
+                    sb.AppendLine(p.ToString() + "\n\t\t============");
             
             try
             {
