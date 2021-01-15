@@ -11,7 +11,7 @@ namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio.Models
         public Ufficio()
         {
             _pratiche.Add(new Pratica("Prima pratica", "Liam", "Bartolini", 'A'));
-            _pratiche.Add(new Pratica("Seconda pratica", "Er", "Faina", 'C'));
+            _pratiche.Add(new Pratica("Seconda pratica", "Er", "Faina", 'A'));
             _pratiche.Add(new Pratica("Terza pratica", "Potenza", "Surreale", 'B'));
             _pratiche.Add(new Pratica("Evasione fiscale", "Stefano", "Lepri", 'D'));
         }
@@ -31,6 +31,7 @@ namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio.Models
         {
             bool isFinded = false;
             StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"\tPratiche di tipo: {tipoPratica}\n");
             foreach(var p in _pratiche)
                 if (p.Tipo == tipoPratica)
                 {

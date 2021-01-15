@@ -26,11 +26,11 @@ namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio.Models
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Pratica numero: {_id+1}");
-            sb.AppendLine($"Pratica tipo: {_tipo}");
-            sb.AppendLine($"Nome: {_nome}");
-            sb.AppendLine($"Cognome: {_cognome}");
-            sb.AppendLine($"Descrizione: {_descrizione}");
+            sb.AppendLine($"Pratica numero:\t{_id+1}");
+            sb.AppendLine($"Pratica tipo:\t{_tipo}");
+            sb.AppendLine($"Nome:\t\t{_nome}");
+            sb.AppendLine($"Cognome:\t{_cognome}");
+            sb.AppendLine($"Descrizione:\t{_descrizione}");
             return sb.ToString();
         }
     }
