@@ -11,22 +11,16 @@ namespace AS2021_TPSIT_4H_BartoliniLiam_ufficio.Models
 
         public Ufficio()
         {
-            // Per i test utilizzo questi dati qui
             _pratiche.Add(new Pratica("Prima pratica", "Liam", "Bartolini", 'A'));
             _pratiche.Add(new Pratica("Seconda pratica", "Er", "Faina", 'A'));
             _pratiche.Add(new Pratica("Terza pratica", "Potenza", "Surreale", 'B'));
             _pratiche.Add(new Pratica("Evasione fiscale", "Stefano", "Lepri", 'D'));
         }
 
-        // Arrow function
-        public void ImmissionePratica(string descrizione, string nome, string cognome, char tipoPratica)
-        => _pratiche.Add(new Pratica(descrizione, nome, cognome, tipoPratica));
+        public void ImmissionePratica(string descrizione, string nome, string cognome, char tipoPratica) => _pratiche.Add(new Pratica(descrizione, nome, cognome, tipoPratica));
 
         public Pratica RicercaPratica(int id)
         {
-            for (int i = 0; i < 100000000; i++)
-            {}
-            
             foreach (var p in _pratiche)
                 if (p._id == id && p._exist)
                     return p;
